@@ -4,9 +4,7 @@ using UnityEngine;
 
 abstract public class SignalComp : MonoBehaviour
 {
-    [SerializeField]
     protected int i_numberOfInputs;//Number of inputs
-    [SerializeField]
     protected int i_numberOfOutputs;//Number of outputs
 
     protected List<Port> l_inputPorts;//List of input ports

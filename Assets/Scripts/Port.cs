@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Port
+public class Port : MonoBehaviour
 {
     public Port(SignalComp owner, bool outputPort)
     {
@@ -13,13 +13,17 @@ public class Port
         p_connectedPort = null;
         i_valueInPort = 0;
     }
+    [SerializeField]
+    public SignalComp sc_owner;//Signal comp the port belongs to
+    [SerializeField]
+    public bool b_inUse;//Is the port in use?
+    //[HideInInspector]
+    public Port p_connectedPort;//If in use, which port is it connected to
 
-    SignalComp sc_owner;//Signal comp the port belongs to
-    bool b_inUse;//Is the port in use?
-    Port p_connectedPort;//If in use, which port is it connected to
-
+    [SerializeField]
     bool b_isOutputPort;//Is the port holding a components output?
-    int i_valueInPort;//Value currently in the port
+    //[HideInInspector]
+    public int i_valueInPort;//Value currently in the port
 
     public int GetConnectedValue()
     {

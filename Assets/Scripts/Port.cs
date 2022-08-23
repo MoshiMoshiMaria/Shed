@@ -25,6 +25,11 @@ public class Port : MonoBehaviour
     //[HideInInspector]
     public int i_valueInPort;//Value currently in the port
 
+    [SerializeField]
+    Material mat_unselected;
+    [SerializeField]
+    Material mat_selected;
+
     public int GetConnectedValue()
     {
         if (b_inUse && !b_isOutputPort)
@@ -54,4 +59,14 @@ public class Port : MonoBehaviour
         b_inUse = false;
         if(!b_isOutputPort) i_valueInPort = 0;
     }
+
+   // public void SelectPort()
+   // {
+   //     
+   // }
+   //
+   // public void DeselectPort()
+   // {
+   //     
+   // }
 }

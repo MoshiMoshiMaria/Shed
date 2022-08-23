@@ -251,9 +251,9 @@ GameObject:
   - component: {fileID: 78123590}
   - component: {fileID: 78123589}
   - component: {fileID: 78123592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Output (4)
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,6 +349,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 0}
   b_isOutputPort: 1
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!1 &476158448
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,9 +364,9 @@ GameObject:
   - component: {fileID: 476158451}
   - component: {fileID: 476158450}
   - component: {fileID: 476158449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Output
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,6 +388,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 1748580505}
   b_isOutputPort: 1
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!65 &476158450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -473,9 +477,9 @@ GameObject:
   - component: {fileID: 593408314}
   - component: {fileID: 593408313}
   - component: {fileID: 593408312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SourcePort
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,6 +515,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 1136530668}
   b_isOutputPort: 1
   i_valueInPort: 7
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!65 &593408313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -695,7 +701,7 @@ GameObject:
   - component: {fileID: 669435361}
   - component: {fileID: 669435360}
   - component: {fileID: 669435359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,6 +993,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1052,13 +1059,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.111443065, y: -0.71981245, z: 0.11780978, w: 0.6749604}
+  m_LocalPosition: {x: 0.584, y: 0.313, z: -0.262}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.665, y: -93.698006, z: -0.085}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c735a75e538e75341a480e603d8417e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084817060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,9 +1091,9 @@ GameObject:
   - component: {fileID: 1084817063}
   - component: {fileID: 1084817062}
   - component: {fileID: 1084817065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Output (3)
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,6 +1189,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 0}
   b_isOutputPort: 1
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!1 &1136530667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,9 +1204,9 @@ GameObject:
   - component: {fileID: 1136530670}
   - component: {fileID: 1136530669}
   - component: {fileID: 1136530668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,6 +1228,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 593408312}
   b_isOutputPort: 0
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!65 &1136530669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1294,9 +1317,9 @@ GameObject:
   - component: {fileID: 1574124283}
   - component: {fileID: 1574124282}
   - component: {fileID: 1574124285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Output (1)
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1392,6 +1415,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 0}
   b_isOutputPort: 1
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!1 &1734073594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,9 +1430,9 @@ GameObject:
   - component: {fileID: 1734073597}
   - component: {fileID: 1734073596}
   - component: {fileID: 1734073599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Output (2)
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,6 +1528,8 @@ MonoBehaviour:
   p_connectedPort: {fileID: 0}
   b_isOutputPort: 1
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}
 --- !u!1 &1748580500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,9 +1543,9 @@ GameObject:
   - component: {fileID: 1748580503}
   - component: {fileID: 1748580502}
   - component: {fileID: 1748580505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input
-  m_TagString: Untagged
+  m_TagString: Port
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1614,3 +1641,5 @@ MonoBehaviour:
   p_connectedPort: {fileID: 476158449}
   b_isOutputPort: 0
   i_valueInPort: 0
+  mat_unselected: {fileID: 0}
+  mat_selected: {fileID: 0}

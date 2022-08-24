@@ -39,6 +39,10 @@ public class Port : MonoBehaviour
         return 0;
     }
 
+    /// This function will only work on output ports.
+    /// This function is primarily for use by signal components during the output third of their update cycle.
+    /// Feel free to use it, but only for output ports.
+    /// Input ports will automatically get their values from the output port they are connected to.
     public void SetConnectedValue(int value)
     {
         if (b_isOutputPort)
@@ -55,9 +59,12 @@ public class Port : MonoBehaviour
 
     public void DisconnectPort()
     {
-        p_connectedPort = null;
-        b_inUse = false;
-        if(!b_isOutputPort) i_valueInPort = 0;
+        if(p_connectedPort != null)
+        {
+            p_connectedPort = null;
+            b_inUse = false;
+            if(!b_isOutputPort) i_valueInPort = 0;
+        }
     }
 
    // public void SelectPort()

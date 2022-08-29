@@ -18,7 +18,7 @@ public class UserInput : MonoBehaviour
         mainCamera = Camera.main;
         lm_layerMask = 1 << 8;
         /* |***Layers in mask***|
-         * 8 - Ports
+         * 8 - Interactable
          * 
          */
 
@@ -45,21 +45,26 @@ public class UserInput : MonoBehaviour
                  * 4.) Give user visual feedback for connecting ports (maybe a wire model that can vary in length at some point, but for now, could just be a UI Text on button press)
                  */
                 GameObject hitObject = hit.collider.gameObject;
-                 if (hitObject.tag == "Port")
-                 {
-                    Port hitObjectPort = hitObject.GetComponent<Port>();
-                    if (b_portConnectionMode && p_lastPort != null)
-                    {
-                        hitObjectPort.ConnectToPort(p_lastPort);
-                        p_lastPort.ConnectToPort(hitObjectPort);
-                        b_portConnectionMode = false;
-                    }
-                    else
-                    {
-                        b_portConnectionMode = true;
-                    }
-                    p_lastPort = hitObjectPort;
-                 }
+                if (hitObject.tag == "Port")
+                {
+                   Port hitObjectPort = hitObject.GetComponent<Port>();
+                   if (b_portConnectionMode && p_lastPort != null)
+                   {
+                       hitObjectPort.ConnectToPort(p_lastPort);
+                       p_lastPort.ConnectToPort(hitObjectPort);
+                       b_portConnectionMode = false;
+                   }
+                   else
+                   {
+                       b_portConnectionMode = true;
+                   }
+                   p_lastPort = hitObjectPort;
+                }
+
+                if (hitObject.tag == "CompBit")
+                {
+                   hitObject.GetComponent<CompBits>().OnClickAction();
+                }
             }
             else
             {
@@ -79,13 +84,7 @@ public class UserInput : MonoBehaviour
             }
             if(hit.collider != null && !b_portConnectionMode)
             {
-                //hit.collider.gameObject.GetComponent<Port>().SelectPort();
-                /* |***TODO***|
-                 * x.) Save last port
-                 * x.) Enter port connection mode (boolean, if got a port in selection mode, connect them and forget them)
-                 * 3.) Give user visual feedback for entering selection mode
-                 * 4.) Give user visual feedback for connecting ports (maybe a wire model that can vary in length at some point, but for now, could just be a UI Text on button press)
-                 */
+
                 GameObject hitObject = hit.collider.gameObject;
                  if (hitObject.tag == "Port")
                  {
@@ -94,6 +93,7 @@ public class UserInput : MonoBehaviour
                     hitObjectPort.DisconnectPort();
                     p_lastPort = hitObjectPort;
                  }
+
             }
             else
             {

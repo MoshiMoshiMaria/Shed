@@ -10,6 +10,9 @@ public class Bias : SignalComp
     int i_outputValue;//Value to send out
 
     [SerializeField]
+    CompDial cd_dial;//Dial connected to this bias
+
+    [SerializeField]
     Port p_input1;//Input port 1
     [SerializeField]
     Port p_output1;//Output port 1
@@ -28,6 +31,11 @@ public class Bias : SignalComp
 
         l_inputPorts.Add(p_input1);
         l_outputPorts.Add(p_output1);
+    }
+
+    void Update()
+    {
+        i_biasValue = cd_dial.GetValue();
     }
 
     public override void GetInputs()

@@ -33,14 +33,10 @@ public class Bias : SignalComp
         l_outputPorts.Add(p_output1);
     }
 
-    void Update()
-    {
-        i_biasValue = cd_dial.GetValue();
-    }
-
     public override void GetInputs()
     {
         i_inputValue = l_inputPorts[0].GetConnectedValue();
+        i_biasValue = cd_dial.GetValue();
     }
 
     public override void ActionValues()

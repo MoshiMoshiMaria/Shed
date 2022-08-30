@@ -9,5 +9,5 @@ abstract public class CompBits : MonoBehaviour
     SignalComp sc_ownerComp;//Connected singal comp
 
     abstract public void OnClickAction();
-    abstract public void OnScrollAction();
+    abstract public void OnScrollAction(float deltaScroll);
 }

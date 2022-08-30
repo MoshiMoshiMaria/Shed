@@ -13,7 +13,7 @@ public class CompButton : CompBits
 
         //Add behaviour which makes it obvious it is on
     }
-    public override void OnScrollAction()
+    public override void OnScrollAction(float deltaScroll)
     {
         //Do Nothing
     }

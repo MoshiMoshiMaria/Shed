@@ -10,6 +10,7 @@ public class UserInput : MonoBehaviour
 
     bool b_portConnectionMode;//Are we in port connection mode?
     Port p_lastPort;//Last port selected
+    CompBits cb_currentCompBit;//Current compBit selected
     
     Ray lastRay;// For Debugging purposes, allows drawing the last ray for longer than a single frame
     // Start is called before the first frame update
@@ -63,12 +64,14 @@ public class UserInput : MonoBehaviour
 
                 if (hitObject.tag == "CompBit")
                 {
-                   hitObject.GetComponent<CompBits>().OnClickAction();
+                    cb_currentCompBit = hitObject.GetComponent<CompBits>();
+                    cb_currentCompBit.OnClickAction();
                 }
             }
             else
             {
                 Debug.Log("Hit Nothing");
+
             }
         }
         if (Input.GetMouseButtonDown(1))
@@ -99,6 +102,19 @@ public class UserInput : MonoBehaviour
             {
                 Debug.Log("Hit Nothing");
             }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            cb_currentCompBit = null;
+        }
+        if(Input.mouseScrollDelta.y != 0)
+        {
+            if(cb_currentCompBit != null)
+            {
+                cb_currentCompBit.OnScrollAction(Input.mouseScrollDelta.y);
+            }
+            //If (sc_currentSigComp != null) ##For moving cvarried items closer and farther
         }
         
         Debug.DrawRay(lastRay.origin, lastRay.direction);

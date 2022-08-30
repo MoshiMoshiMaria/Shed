@@ -9,7 +9,7 @@ public class CompDial : CompBits
     int i_minValue;//Min value of the dial
     [SerializeField]
     int i_MaxValue;//Max value of the dial
-
+    
     int i_currentValue;//Current Value of the dial
 
     [SerializeField]
@@ -33,24 +33,21 @@ public class CompDial : CompBits
 
     public override void OnClickAction()
     {
-        OnScrollAction();
+        Debug.Log("OnClick");
+        //Do Nothing
     }
-    public override void OnScrollAction()
+    public override void OnScrollAction(float deltaScroll)
     {
-        while (Input.GetMouseButton(0))
+        Debug.Log("OnScroll");
+        if (deltaScroll > 0)
         {
-            float deltaScroll = Input.mouseScrollDelta.y;
-
-            if(deltaScroll > 0)
-            {
-                i_currentValue += Mathf.RoundToInt(deltaScroll * f_sensitivity);
-                //Add behaviour for spinning the dial
-            }
-            else if(deltaScroll < 0)
-            {
-                i_currentValue -= Mathf.RoundToInt(deltaScroll * f_sensitivity);
-                //Add behaviour for spinning the dial
-            }
+            i_currentValue += Mathf.RoundToInt(deltaScroll * f_sensitivity);
+            //Add behaviour for spinning the dial
+        }
+        else if (deltaScroll < 0)
+        {
+            i_currentValue -= Mathf.RoundToInt(deltaScroll * f_sensitivity);
+            //Add behaviour for spinning the dial
         }
     }
 }

@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_input1: {fileID: 3842745406797740930}
-  p_input2: {fileID: 0}
+  p_input2: {fileID: 3842745406814568089}
   p_output1: {fileID: 3842745406063639699}
 --- !u!1 &3842745406063639692
 GameObject:

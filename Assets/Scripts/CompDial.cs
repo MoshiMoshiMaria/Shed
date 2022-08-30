@@ -33,21 +33,12 @@ public class CompDial : CompBits
 
     public override void OnClickAction()
     {
-        Debug.Log("OnClick");
+        //Debug.Log("OnClick");
         //Do Nothing
     }
     public override void OnScrollAction(float deltaScroll)
     {
-        Debug.Log("OnScroll");
-        if (deltaScroll > 0)
-        {
-            i_currentValue += Mathf.RoundToInt(deltaScroll * f_sensitivity);
-            //Add behaviour for spinning the dial
-        }
-        else if (deltaScroll < 0)
-        {
-            i_currentValue -= Mathf.RoundToInt(deltaScroll * f_sensitivity);
-            //Add behaviour for spinning the dial
-        }
+        //Debug.Log("OnScroll");
+        i_currentValue += Mathf.RoundToInt(deltaScroll * f_sensitivity);
     }
 }

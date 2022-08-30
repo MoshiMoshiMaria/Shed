@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bias : SignalComp
 {
@@ -11,6 +12,8 @@ public class Bias : SignalComp
 
     [SerializeField]
     CompDial cd_dial;//Dial connected to this bias
+    [SerializeField]
+    CompDisplay dis_display;//Display connected to this bias
 
     [SerializeField]
     Port p_input1;//Input port 1
@@ -37,6 +40,7 @@ public class Bias : SignalComp
     {
         i_inputValue = l_inputPorts[0].GetConnectedValue();
         i_biasValue = cd_dial.GetValue();
+        dis_display.text.text = i_biasValue.ToString();
     }
 
     public override void ActionValues()

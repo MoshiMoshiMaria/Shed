@@ -92,8 +92,11 @@ public class UserInput : MonoBehaviour
                  if (hitObject.tag == "Port")
                  {
                     Port hitObjectPort = hitObject.GetComponent<Port>();
-                    hitObjectPort.p_connectedPort.DisconnectPort();
-                    hitObjectPort.DisconnectPort();
+                    if (hitObjectPort.p_connectedPort != null)
+                    {
+                        hitObjectPort.p_connectedPort.DisconnectPort();
+                        hitObjectPort.DisconnectPort();
+                    }
                     p_lastPort = hitObjectPort;
                  }
 

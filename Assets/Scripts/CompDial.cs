@@ -8,7 +8,7 @@ public class CompDial : CompBits
     [SerializeField]
     int i_minValue;//Min value of the dial
     [SerializeField]
-    int i_MaxValue;//Max value of the dial
+    int i_maxValue;//Max value of the dial
     
     int i_currentValue;//Current Value of the dial
 
@@ -40,5 +40,7 @@ public class CompDial : CompBits
     {
         //Debug.Log("OnScroll");
         i_currentValue += Mathf.RoundToInt(deltaScroll * f_sensitivity);
+        if (i_currentValue > i_maxValue) i_currentValue = i_maxValue;
+        if (i_currentValue < i_minValue) i_currentValue = i_minValue;
     }
 }

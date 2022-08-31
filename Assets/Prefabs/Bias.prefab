@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sc_ownerComp: {fileID: 1551335075444576406}
   i_minValue: -100
-  i_MaxValue: 100
+  i_maxValue: 100
   f_sensitivity: 1
 --- !u!1 &1551335075661235655
 GameObject:

@@ -108,9 +108,6 @@ public class SignalSource : SignalComp
                 f_timer += Time.deltaTime;
                 if (f_timer >= f_oRestTime)
                 {
-                    b_oDirection = !b_oDirection;
-                    f_timer = 0;
-                }
                 if (b_oDirection)
                 {
                     i_signalValue += i_oStepValue;
@@ -119,8 +116,18 @@ public class SignalSource : SignalComp
                 {
                     i_signalValue -= i_oStepValue;
                 }
-                if (i_signalValue < i_oMinValue) i_signalValue = i_oMinValue;
-                if (i_signalValue > i_oMaxValue) i_signalValue = i_oMaxValue;
+                    f_timer = 0;
+                if (i_signalValue <= i_oMinValue)
+                {
+                    i_signalValue = i_oMinValue;
+                    b_oDirection = !b_oDirection;
+                }
+                if (i_signalValue >= i_oMaxValue)
+                {
+                    i_signalValue = i_oMaxValue;
+                    b_oDirection = !b_oDirection;
+                }
+                }
                 //Debug.Log("Oscillating Source: " + i_signalValue);
                 break;
             case SignalType.Random:

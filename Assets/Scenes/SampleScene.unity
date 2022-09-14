@@ -420,17 +420,17 @@ MonoBehaviour:
   p_outputPort: {fileID: 2111129541}
   st_signalType: 0
   i_sStaticValue: 10
-  i_oMinValue: 0
-  i_oMaxValue: 0
-  i_oStepValue: 0
-  f_oRestTime: 0
-  i_rMinValue: 0
-  i_rMaxValue: 0
-  f_rRestTime: 0
+  i_oMinValue: 10
+  i_oMaxValue: 50
+  i_oStepValue: 5
+  f_oRestTime: 1
+  i_rMinValue: 10
+  i_rMaxValue: 100
+  f_rRestTime: 3
   i_pRestValue: 0
-  i_pPulseValue: 0
-  f_pRestTime: 0
-  f_pPulseTime: 0
+  i_pPulseValue: 100
+  f_pRestTime: 3
+  f_pPulseTime: 1
 --- !u!1001 &213388608344861113
 PrefabInstance:
   m_ObjectHideFlags: 0

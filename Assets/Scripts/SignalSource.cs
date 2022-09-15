@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SignalSource : SignalComp
 {
-
     int i_signalValue;//Value at the source after ActionValues
 
     float f_timer;//Float value for the timer
@@ -89,6 +88,7 @@ public class SignalSource : SignalComp
         i_signalValue = 0;
         f_timer = 0;
         f_pulseTimer = 0;
+
     }
 
     public override void GetInputs()

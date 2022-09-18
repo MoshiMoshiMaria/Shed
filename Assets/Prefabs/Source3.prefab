@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_outputPort: {fileID: 7487821012499093163}
+  t_displayText: {fileID: 0}
   st_signalType: 0
   i_sStaticValue: 10
   i_oMinValue: 10
@@ -731,6 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_outputPort: {fileID: 8086961434235035968}
+  t_displayText: {fileID: 0}
   st_signalType: 0
   i_sStaticValue: 10
   i_oMinValue: 10
@@ -758,7 +760,7 @@ GameObject:
   - component: {fileID: 8086961434488741044}
   m_Layer: 0
   m_Name: Source3
-  m_TagString: Untagged
+  m_TagString: SignalComp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,6 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_outputPort: {fileID: 7891644325163036209}
+  t_displayText: {fileID: 0}
   st_signalType: 0
   i_sStaticValue: 10
   i_oMinValue: 10

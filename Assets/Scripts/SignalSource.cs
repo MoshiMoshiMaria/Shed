@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SignalSource : SignalComp
 {
@@ -11,6 +12,9 @@ public class SignalSource : SignalComp
 
     [SerializeField]
     Port p_outputPort;//Port to output as
+
+    [SerializeField]
+    Text t_displayText;//Text to display input value
 
     enum SignalType {Static, Oscillating, Random, Pulse };//Possible types of signal
 
@@ -162,5 +166,6 @@ public class SignalSource : SignalComp
     public override void SetOutputs()
     {
         p_outputPort.SetConnectedValue(i_signalValue);
+        t_displayText.text = i_signalValue.ToString();
     }
 }

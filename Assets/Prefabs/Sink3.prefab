@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 5057076233558214704}
   m_Layer: 0
   m_Name: Sink3
-  m_TagString: Untagged
+  m_TagString: SignalComp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 383790498189437173}
   m_Layer: 0
   m_Name: Not
-  m_TagString: Untagged
+  m_TagString: SignalComp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Port
   - CompBit
+  - PlaceableArea
+  - SignalComp
   layers:
   - Default
   - TransparentFX
